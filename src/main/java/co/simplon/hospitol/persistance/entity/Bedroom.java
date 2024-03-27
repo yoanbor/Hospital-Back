@@ -25,8 +25,35 @@ public class Bedroom {
     @Column(name = "modification_dt")
     private Timestamp modificationDT;
 
-    @OneToMany
-    @JoinColumn(name = "id_service")
-    private List<Service> services;
+    public int getId() {
+        return id;
+    }
 
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public int getNumbers() {
+        return numbers;
+    }
+
+    public void setNumbers(int numbers) {
+        this.numbers = numbers;
+    }
+
+    public Timestamp getCreationDT() {
+        return creationDT;
+    }
+
+    public void setCreationDT(Timestamp creationDT) {
+        this.creationDT = creationDT;
+    }
+
+    public Timestamp getModificationDT() {
+        return modificationDT;
+    }
+
+    public void setModificationDT(Timestamp modificationDT) {
+        this.modificationDT = modificationDT;
+    }
 }
