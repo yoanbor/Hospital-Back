@@ -6,7 +6,7 @@ import java.sql.Timestamp;
 import java.util.List;
 
 @Entity
-@Table
+@Table(name = "beds")
 public class Bed {
 
     @Id
