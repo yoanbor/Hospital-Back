@@ -1,31 +1,16 @@
-package co.simplon.hospitol.persistance.entity;
-
-import jakarta.persistence.*;
+package co.simplon.hospitol.business.dto;
 
 import java.sql.Timestamp;
 
+public class ServiceDTO {
 
-@Entity
-@Table(name = "Service")
-public class Service {
-
-    @Id
-    @Column(name = "id_service")
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-    @Basic
-    @Column(name = "name", length = 50)
     private String name;
 
-    @Temporal(TemporalType.TIMESTAMP)
-    @Column(name = "creation_dt")
     private Timestamp creationDT;
 
-    @Temporal(TemporalType.TIMESTAMP)
-    @Column(name = "modification_dt")
     private Timestamp modificationDT;
-
 
     public int getId() {
         return id;
