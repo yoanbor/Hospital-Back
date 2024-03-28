@@ -48,74 +48,136 @@ public class Patient {
     @JoinColumn(name = "id_bed")
     private List<Bed> beds;
 
+    /**
+     * @return the id of the patient
+     */
     public int getId() {
         return id;
     }
 
+    /**
+     * @param id the id of the patient to set
+     */
     public void setId(int id) {
         this.id = id;
     }
 
+    /**
+     *
+     * @return the name of the patient
+     */
     public String getName() {
         return name;
     }
 
+    /**
+     * @param name the name of the patient to set
+     */
     public void setName(String name) {
         this.name = name;
     }
 
+    /**
+     *
+     * @return the firstname of the patient
+     */
     public String getFirstname() {
         return firstname;
     }
 
+    /**
+     * @param firstname the firstname of the patient to set
+     */
     public void setFirstname(String firstname) {
         this.firstname = firstname;
     }
 
+    /**
+     *
+     * @return the date of birthday of the patient
+     */
     public Date getDob() {
         return dob;
     }
 
+    /**
+     * @param dob the date of birthday of the patient to set
+     */
     public void setDob(Date dob) {
         this.dob = dob;
     }
 
+    /**
+     *
+     * @return the security social number of the patient
+     */
     public String getSecuritySocialNumber() {
         return securitySocialNumber;
     }
 
+    /**
+     * @param securitySocialNumber the security social number of the patient to set
+     */
     public void setSecuritySocialNumber(String securitySocialNumber) {
         this.securitySocialNumber = securitySocialNumber;
     }
 
+    /**
+     *
+     * @return the creation date of patient
+     */
     public Timestamp getCreationDT() {
         return creationDT;
     }
 
+    /**
+     * @param creationDT the creation date of patient to set
+     */
     public void setCreationDT(Timestamp creationDT) {
         this.creationDT = creationDT;
     }
 
+    /**
+     *
+     * @return the modification date of patient
+     */
     public Timestamp getModificationDT() {
         return modificationDT;
     }
 
+    /**
+     * @param modificationDT the modification date of patient to set
+     */
     public void setModificationDT(Timestamp modificationDT) {
         this.modificationDT = modificationDT;
     }
 
+    /**
+     *
+     * @return the services
+     */
     public List<Service> getServices() {
         return services;
     }
 
+    /**
+     * @param services the services to set
+     */
     public void setServices(List<Service> services) {
         this.services = services;
     }
 
+    /**
+     *
+     * @return the beds
+     */
     public List<Bed> getBeds() {
         return beds;
     }
 
+    /**
+     * @param beds the beds to set
+     */
     public void setBeds(List<Bed> beds) {
         this.beds = beds;
     }

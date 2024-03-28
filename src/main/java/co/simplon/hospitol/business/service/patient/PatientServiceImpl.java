@@ -49,7 +49,9 @@ public class PatientServiceImpl implements IPatientService {
             existingPatient.setServices(patientDTO.getServices());
             existingPatient.setBeds(patientDTO.getBeds());
 
-            patientRepo.save(existingPatient);
+         patientRepo.save(existingPatient);
+
+
 
     }
 
