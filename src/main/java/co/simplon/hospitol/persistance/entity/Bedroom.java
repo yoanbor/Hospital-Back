@@ -10,7 +10,7 @@ import java.util.List;
 public class Bedroom {
 
     @Id
-    @Column(name = "id_bedroom")
+    @Column(name = "id_bedroom", nullable = false)
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 

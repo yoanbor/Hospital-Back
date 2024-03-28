@@ -20,7 +20,7 @@ public class ReadPatientController {
         this.patientService = patientService;
     }
 
-    @GetMapping("/product")
+    @GetMapping("/patient")
     public List<PatientDTO> getPatients() {
         return patientService.getPatients();
     }

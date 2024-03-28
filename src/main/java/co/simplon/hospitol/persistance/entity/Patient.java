@@ -12,7 +12,7 @@ public class Patient {
 
 
     @Id
-    @Column(name = "id_patient")
+    @Column(name = "id_patient", nullable = false)
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 

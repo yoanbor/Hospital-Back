@@ -10,7 +10,7 @@ import java.util.List;
 public class Bed {
 
     @Id
-    @Column(name = "id_bed")
+    @Column(name = "id_bed", nullable = false)
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
@@ -29,14 +29,24 @@ public class Bed {
     @JoinColumn(name = "id_bedroom")
     private List<Bedroom> bedrooms;
 
+    /**
+     * @return the id
+     */
     public int getId() {
         return id;
     }
 
+    /**
+     * @param id the id to set
+     */
     public void setId(int id) {
         this.id = id;
     }
 
+    /**
+     *
+     * @return the number's bed
+     */
     public int getNumbers() {
         return numbers;
     }

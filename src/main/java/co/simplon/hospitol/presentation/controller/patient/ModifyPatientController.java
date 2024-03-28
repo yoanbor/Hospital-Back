@@ -19,7 +19,7 @@ public class ModifyPatientController {
         this.patientService = patientService;
     }
 
-    @PutMapping("/product/{id}")
+    @PutMapping("/patient/{id}")
     public void modifyPatient(@PathVariable int id, @RequestBody PatientDTO patientDTO) {
         patientService.modifyPatient(id, patientDTO);
     }
