@@ -3,14 +3,14 @@ package co.simplon.hospitol.persistance.entity;
 import jakarta.persistence.*;
 
 import java.sql.Timestamp;
-import java.util.List;
+
 
 @Entity
 @Table(name = "bedrooms")
 public class Bedroom {
 
     @Id
-    @Column(name = "id_bedroom", nullable = false)
+    @Column(name = "id_bedroom")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 

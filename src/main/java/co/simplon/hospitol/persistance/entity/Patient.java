@@ -4,7 +4,6 @@ import jakarta.persistence.*;
 
 import java.sql.Timestamp;
 import java.util.Date;
-import java.util.List;
 
 @Entity
 @Table(name = "patients")
@@ -12,7 +11,7 @@ public class Patient {
 
 
     @Id
-    @Column(name = "id_patient", nullable = false)
+    @Column(name = "id_patient")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
@@ -40,13 +39,13 @@ public class Patient {
     @Column(name = "modification_dt")
     private Timestamp modificationDT;
 
-    @OneToMany
+    @ManyToOne
     @JoinColumn(name = "id_service")
-    private List<Service> services;
+    private Service services;
 
-    @OneToMany
+    @ManyToOne
     @JoinColumn(name = "id_bed")
-    private List<Bed> beds;
+    private Bed beds;
 
     /**
      * @return the id of the patient
@@ -152,33 +151,19 @@ public class Patient {
         this.modificationDT = modificationDT;
     }
 
-    /**
-     *
-     * @return the services
-     */
-    public List<Service> getServices() {
+    public Service getServices() {
         return services;
     }
 
-    /**
-     * @param services the services to set
-     */
-    public void setServices(List<Service> services) {
+    public void setServices(Service services) {
         this.services = services;
     }
 
-    /**
-     *
-     * @return the beds
-     */
-    public List<Bed> getBeds() {
+    public Bed getBeds() {
         return beds;
     }
 
-    /**
-     * @param beds the beds to set
-     */
-    public void setBeds(List<Bed> beds) {
+    public void setBeds(Bed beds) {
         this.beds = beds;
     }
 }

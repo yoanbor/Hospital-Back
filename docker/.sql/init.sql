@@ -162,46 +162,46 @@ BEFORE UPDATE ON patients -- avant l'insertion dans la table patients
 FOR EACH ROW -- pour chaque ligne
 EXECUTE FUNCTION set_modification_date_patients(); -- exécute la fonction pour chaque nouvelle ligne insérée
 
------------------------------------------------------------------------------------------------------------ 
-
+-----------------------------------------------------------------------------------------------------------
 INSERT INTO services (name) VALUES
-    ('Urgences'),
-    ('Cardiologie'),
-    ('Chirurgie'),
-    ('Pédiatrie'),
-    ('Radiologie'),
-    ('Maternité'),
-    ('Neurologie'),
-    ('Psychiatrie');
+                                ('Urgences'),
+                                ('Cardiologie'),
+                                ('Chirurgie'),
+                                ('Pédiatrie'),
+                                ('Radiologie'),
+                                ('Maternité'),
+                                ('Neurologie'),
+                                ('Psychiatrie');
 
 INSERT INTO bedrooms (numbers) VALUES
-    (601),
-    (602),
-    (603),
-    (604),
-    (605),
-    (606),
-    (607), 
-    (608),
-    (609);
+                                   (601),
+                                   (602),
+                                   (603),
+                                   (604),
+                                   (605),
+                                   (606),
+                                   (607),
+                                   (608),
+                                   (609);
 
 INSERT INTO beds (numbers, id_bedroom) VALUES
-    (91, 1),
-    (92, 2),
-    (93, 3),
-    (94, 4),
-    (95, 5),
-    (96, 6),
-    (97, 7),
-    (98, 8),
-    (99, 9);
+                                           (91, 1),
+                                           (92, 2),
+                                           (93, 3),
+                                           (94, 4),
+                                           (95, 5),
+                                           (96, 6),
+                                           (97, 7),
+                                           (98, 8),
+                                           (99, 9);
 
-INSERT INTO patients (name, firstname, dob, securitysocialnumber, id_service, id_bed ) VALUES
-    ('Durand', 'Anne', '1978-05-15', '1234567890123', 2, 1),
-    ('Leroux', 'Marc', '1965-09-22', '2345678901234', 1, 9),
-    ('Fournier', 'Sophie', '1982-12-10', '3456789012345', 3, 5),
-    ('Girard', 'Pierre', '1990-03-03', '4567890123456', 7, 6),
-    ('Dubois', 'Marie', '1976-07-28', '5678901234567', 8, 9),
-    ('Lefevre', 'Luc', '1950-11-18', '6789012345678', 7, 9),
-    ('Petit', 'Laura', '1995-02-05', '7890123456789', 6, 1),
-    ('Thomas', 'Jean', '1988-04-30', '8901234567890', 4, 9);
+
+INSERT INTO patients (name, firstname, dob, securitysocialnumber, id_service, id_bed) VALUES
+                                                                      ('Durand', 'Anne', '1978-05-15', '1234567890123', 1, 1),
+                                                                      ('Leroux', 'Marc', '1965-09-22', '2345678901234', 2, 9),
+                                                                      ('Fournier', 'Sophie', '1982-12-10', '3456789012345', 3, 5),
+                                                                      ('Girard', 'Pierre', '1990-03-03', '4567890123456', 4, 6),
+                                                                      ('Dubois', 'Marie', '1976-07-28', '5678901234567', 8, 9),
+                                                                      ('Lefevre', 'Luc', '1950-11-18', '6789012345678', 4, 9),
+                                                                      ('Petit', 'Laura', '1995-02-05', '7890123456789', 7, 1),
+                                                                      ('Thomas', 'Jean', '1988-04-30', '8901234567890', 2, 9);

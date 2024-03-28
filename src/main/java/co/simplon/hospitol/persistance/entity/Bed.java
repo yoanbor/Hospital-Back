@@ -3,14 +3,13 @@ package co.simplon.hospitol.persistance.entity;
 import jakarta.persistence.*;
 
 import java.sql.Timestamp;
-import java.util.List;
 
 @Entity
 @Table(name = "beds")
 public class Bed {
 
     @Id
-    @Column(name = "id_bed", nullable = false)
+    @Column(name = "id_bed")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
@@ -25,9 +24,9 @@ public class Bed {
     @Column(name = "modification_dt")
     private Timestamp modificationDT;
 
-    @OneToMany
+    @ManyToOne
     @JoinColumn(name = "id_bedroom")
-    private List<Bedroom> bedrooms;
+    private Bedroom bedrooms;
 
     /**
      * @return the id of the bed
@@ -88,18 +87,11 @@ public class Bed {
         this.modificationDT = modificationDT;
     }
 
-    /**
-     *
-     * @return the bedrooms
-     */
-    public List<Bedroom> getBedrooms() {
+    public Bedroom getBedrooms() {
         return bedrooms;
     }
 
-    /**
-     * @param bedrooms the bedrooms to set
-     */
-    public void setBedrooms(List<Bedroom> bedrooms) {
+    public void setBedrooms(Bedroom bedrooms) {
         this.bedrooms = bedrooms;
     }
 }

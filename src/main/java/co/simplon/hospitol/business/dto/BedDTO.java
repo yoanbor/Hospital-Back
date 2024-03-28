@@ -3,7 +3,6 @@ package co.simplon.hospitol.business.dto;
 import co.simplon.hospitol.persistance.entity.Bedroom;
 
 import java.sql.Timestamp;
-import java.util.List;
 
 public class BedDTO {
     private int id_bed;
@@ -14,7 +13,7 @@ public class BedDTO {
 
     private Timestamp modificationDT;
 
-    private List<Bedroom> bedrooms;
+    private Bedroom bedrooms;
 
 
     public int getId_bed() {
@@ -49,11 +48,11 @@ public class BedDTO {
         this.modificationDT = modificationDT;
     }
 
-    public List<Bedroom> getBedrooms() {
+    public Bedroom getBedrooms() {
         return bedrooms;
     }
 
-    public void setBedrooms(List<Bedroom> bedrooms) {
+    public void setBedrooms(Bedroom bedrooms) {
         this.bedrooms = bedrooms;
     }
 }

@@ -5,7 +5,6 @@ import co.simplon.hospitol.persistance.entity.Service;
 
 import java.sql.Timestamp;
 import java.util.Date;
-import java.util.List;
 
 public class PatientDTO {
 
@@ -23,9 +22,9 @@ public class PatientDTO {
 
     private Timestamp modificationDT;
 
-    private List<Service> services;
+    private Service services;
 
-    private List<Bed> beds;
+    private Bed beds;
 
     public int getId() {
         return id;
@@ -83,19 +82,19 @@ public class PatientDTO {
         this.modificationDT = modificationDT;
     }
 
-    public List<Service> getServices() {
-        return services;
+    public Service getServices() {
+        return (Service) services;
     }
 
-    public void setServices(List<Service> services) {
+    public void setServices(Service services) {
         this.services = services;
     }
 
-    public List<Bed> getBeds() {
-        return beds;
+    public Bed getBeds() {
+        return (Bed) beds;
     }
 
-    public void setBeds(List<Bed> beds) {
+    public void setBeds(Bed beds) {
         this.beds = beds;
     }
 }
