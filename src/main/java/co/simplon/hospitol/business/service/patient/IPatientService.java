@@ -36,7 +36,8 @@ public interface IPatientService {
      *
      * @param id      The ID of the patient to be modified.
      * @param patient The PatientDTO object representing the modified patient information.
+     *
      */
-    void modifyPatient(int id, PatientDTO patient);
+    PatientDTO modifyPatient(int id, PatientDTO patient);
 
 }

@@ -46,7 +46,7 @@ public class PatientServiceImpl implements IPatientService {
     }
 
     @Override
-    public void modifyPatient(int id, PatientDTO patientDTO) {
+    public PatientDTO modifyPatient(int id, PatientDTO patientDTO) {
         Optional<Patient> optionalPatient = patientRepo.findById(id);
         if (optionalPatient.isPresent()) {
             Patient existingPatient = optionalPatient.get();
@@ -61,5 +61,6 @@ public class PatientServiceImpl implements IPatientService {
 
     }
 
-}
+        return patientDTO;
+    }
 }
