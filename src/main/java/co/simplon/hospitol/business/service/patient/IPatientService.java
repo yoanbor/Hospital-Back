@@ -4,25 +4,39 @@ import co.simplon.hospitol.business.dto.PatientDTO;
 
 import java.util.List;
 
+/**
+ * Interface for patient-related services.
+ */
 public interface IPatientService {
 
     /**
-     * Service permettant de lister les patients
+     * Retrieves a list of all patients.
      *
-     * @return liste de tous les patients
+     * @return A list of PatientDTO objects representing all patients.
      */
     List<PatientDTO> getPatients();
 
     /**
-     * @param id
-     * @return
+     * Retrieves a patient by their ID.
+     *
+     * @param id The ID of the patient to retrieve.
+     * @return The PatientDTO object representing the patient with the specified ID.
      */
     PatientDTO findById(final int id);
 
+    /**
+     * Adds a new patient.
+     *
+     * @param patient The PatientDTO object representing the patient to be added.
+     */
     void addPatient(final PatientDTO patient);
 
+    /**
+     * Modifies an existing patient.
+     *
+     * @param id      The ID of the patient to be modified.
+     * @param patient The PatientDTO object representing the modified patient information.
+     */
     void modifyPatient(int id, PatientDTO patient);
-
-
 
 }

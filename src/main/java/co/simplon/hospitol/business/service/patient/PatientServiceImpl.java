@@ -10,9 +10,17 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Optional;
 
+/**
+ * Implementation of the IPatientService interface providing patient-related services.
+ */
 @Service
 public class PatientServiceImpl implements IPatientService {
 
+    /**
+     * Sets the patient repository.
+     *
+     * @param patientRepo The patient repository to be set.
+     */
     @Autowired
     public void setPatientRepo(IPatientRepository patientRepo) {
         this.patientRepo = patientRepo;
@@ -51,9 +59,7 @@ public class PatientServiceImpl implements IPatientService {
 
          patientRepo.save(existingPatient);
 
-
-
     }
 
-
-}}
+}
+}

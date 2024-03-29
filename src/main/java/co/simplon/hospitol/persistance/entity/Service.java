@@ -5,6 +5,9 @@ import jakarta.persistence.*;
 import java.sql.Timestamp;
 
 
+/**
+ * Entity class representing a service.
+ */
 @Entity
 @Table(name = "Services")
 public class Service {
@@ -28,58 +31,72 @@ public class Service {
 
 
     /**
-     * @return the id of service
+     * Retrieves the ID of the service.
+     *
+     * @return The ID of the service.
      */
     public int getId() {
         return id;
     }
 
     /**
-     * @param id the id of service to set
+     * Sets the ID of the service.
+     *
+     * @param id The ID of the service.
      */
     public void setId(int id) {
         this.id = id;
     }
 
     /**
-     * @return the name of service
+     * Retrieves the name of the service.
+     *
+     * @return The name of the service.
      */
     public String getName() {
         return name;
     }
 
     /**
-     * @param name the name of service to set
+     * Sets the name of the service.
+     *
+     * @param name The name of the service.
      */
     public void setName(String name) {
         this.name = name;
     }
 
     /**
+     * Retrieves the timestamp indicating the creation date and time of the service.
      *
-     * @return the creation date of service
+     * @return The creation date and time of the service.
      */
     public Timestamp getCreationDT() {
         return creationDT;
     }
 
     /**
-     * @param creationDT the creation date of service to set
+     * Sets the timestamp indicating the creation date and time of the service.
+     *
+     * @param creationDT The creation date and time of the service.
      */
     public void setCreationDT(Timestamp creationDT) {
         this.creationDT = creationDT;
     }
 
     /**
+     * Retrieves the timestamp indicating the modification date and time of the service.
      *
-     * @return the modification date of service
+     * @return The modification date and time of the service.
      */
     public Timestamp getModificationDT() {
         return modificationDT;
     }
 
     /**
-     * @param modificationDT the modification date of service to set
+     * Sets the timestamp indicating the modification date and time of the service.
+     *
+     * @param modificationDT The modification date and time of the service.
      */
     public void setModificationDT(Timestamp modificationDT) {
         this.modificationDT = modificationDT;

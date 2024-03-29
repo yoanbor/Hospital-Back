@@ -5,6 +5,9 @@ import jakarta.persistence.*;
 import java.sql.Timestamp;
 import java.util.Date;
 
+/**
+ * Entity class representing a patient.
+ */
 @Entity
 @Table(name = "patients")
 public class Patient {
@@ -48,121 +51,163 @@ public class Patient {
     private Bed beds;
 
     /**
-     * @return the id of the patient
+     * Retrieves the ID of the patient.
+     *
+     * @return The ID of the patient.
      */
     public int getId() {
         return id;
     }
 
     /**
-     * @param id the id of the patient to set
+     * Sets the ID of the patient.
+     *
+     * @param id The ID of the patient.
      */
     public void setId(int id) {
         this.id = id;
     }
 
     /**
+     * Retrieves the last name of the patient.
      *
-     * @return the name of the patient
+     * @return The last name of the patient.
      */
     public String getName() {
         return name;
     }
 
     /**
-     * @param name the name of the patient to set
+     * Sets the last name of the patient.
+     *
+     * @param name The last name of the patient.
      */
-    public void setName(String name) {
+     public void setName(String name) {
         this.name = name;
     }
 
     /**
+     * Retrieves the first name of the patient.
      *
-     * @return the firstname of the patient
+     * @return The first name of the patient.
      */
     public String getFirstname() {
         return firstname;
     }
 
     /**
-     * @param firstname the firstname of the patient to set
+     * Sets the first name of the patient.
+     *
+     * @param firstname The first name of the patient.
      */
-    public void setFirstname(String firstname) {
+     public void setFirstname(String firstname) {
         this.firstname = firstname;
     }
 
     /**
+     * Retrieves the date of birth of the patient.
      *
-     * @return the date of birthday of the patient
+     * @return The date of birth of the patient.
      */
     public Date getDob() {
         return dob;
     }
 
     /**
-     * @param dob the date of birthday of the patient to set
+     * Sets the date of birth of the patient.
+     *
+     * @param dob The date of birth of the patient.
      */
     public void setDob(Date dob) {
         this.dob = dob;
     }
 
     /**
+     * Retrieves the social security number of the patient.
      *
-     * @return the security social number of the patient
+     * @return The social security number of the patient.
      */
     public String getSecuritySocialNumber() {
         return securitySocialNumber;
     }
 
     /**
-     * @param securitySocialNumber the security social number of the patient to set
+     * Sets the social security number of the patient.
+     *
+     * @param securitySocialNumber The social security number of the patient.
      */
     public void setSecuritySocialNumber(String securitySocialNumber) {
         this.securitySocialNumber = securitySocialNumber;
     }
 
     /**
+     * Retrieves the timestamp indicating the creation date and time of the patient.
      *
-     * @return the creation date of patient
+     * @return The creation date and time of the patient.
      */
     public Timestamp getCreationDT() {
         return creationDT;
     }
 
     /**
-     * @param creationDT the creation date of patient to set
+     * Sets the timestamp indicating the creation date and time of the patient.
+     *
+     * @param creationDT The creation date and time of the patient.
      */
     public void setCreationDT(Timestamp creationDT) {
         this.creationDT = creationDT;
     }
 
     /**
+     * Retrieves the timestamp indicating the modification date and time of the patient.
      *
-     * @return the modification date of patient
+     * @return The modification date and time of the patient.
      */
     public Timestamp getModificationDT() {
         return modificationDT;
     }
 
     /**
-     * @param modificationDT the modification date of patient to set
+     * Sets the timestamp indicating the modification date and time of the patient.
+     *
+     * @param modificationDT The modification date and time of the patient.
      */
     public void setModificationDT(Timestamp modificationDT) {
         this.modificationDT = modificationDT;
     }
 
+    /**
+     * Retrieves the service associated with the patient.
+     *
+     * @return The service associated with the patient.
+     */
     public Service getServices() {
         return services;
     }
 
+    /**
+     * Sets the service associated with the patient.
+     *
+     * @param services The service associated with the patient.
+     */
     public void setServices(Service services) {
         this.services = services;
     }
 
+    /**
+     * Retrieves the bed associated with the patient.
+     *
+     * @return The bed associated with the patient.
+     */
     public Bed getBeds() {
         return beds;
     }
 
+    /**
+     * Sets the bed associated with the patient.
+     *
+     * @param beds The bed associated with the patient.
+     */
     public void setBeds(Bed beds) {
         this.beds = beds;
     }
