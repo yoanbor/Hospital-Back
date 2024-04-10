@@ -3,7 +3,7 @@ on:
   push:
     branches:
       - main
-      - master
+      - cicd
       - develop
       - 'releases/**'
   pull_request:
