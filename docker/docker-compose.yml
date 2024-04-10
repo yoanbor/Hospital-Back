@@ -2,20 +2,20 @@ version: "3.9"
 
 services:
 
-  back:
-    image: myimage:1.0.0
-    container_name: backend_container
-    restart: always
-    environment:
-      - SPRING_DATASOURCE_URL=jdbc:postgresql://db:5432/db
-    ports:
-      - "8080:8080"
-    depends_on:
-      - db
+ # back:
+  #  image: myimage:1.0.0
+   # container_name: backend_container
+   # restart: always
+   # environment:
+    #  - SPRING_DATASOURCE_URL=jdbc:postgresql://db:5432/db
+    #ports:
+    #  - "8080:8080"
+    #depends_on:
+    #  - db
 
   db:
     image: postgres:16.2
-    container_name: postgres_container
+    container_name: postgres
     restart: always
     environment:
       POSTGRES_USER: dbuser
@@ -25,6 +25,23 @@ services:
       - "5432:5432"
     volumes:
       - pg_data:/var/lib/postgres/data
+
+  sonarqube:
+    container_name: sonarqube
+    image: sonarqube
+    depends_on:
+      - db
+    environment:
+      - SONARQUBE_JDBC_USERNAME=sonarqube
+      - SONARQUBE_JDBC_PASSWORD=sonarpass
+      - SONARQUBE_JDBC_URL=jdbc:postgresql://db:5432/db
+    volumes:
+      - sonarqube_conf:/opt/sonarqube/conf
+      - sonarqube_data:/opt/sonarqube/data
+      - sonarqube_extensions:/opt/sonarqube/extensions
+      - sonarqube_bundled-plugins:/opt/sonarqube/lib/bundled-plugins
+    ports:
+      - 9000:9000
 
   pg-admin:
     image: dpage/pgadmin4:8.5
@@ -38,3 +55,9 @@ services:
 
 volumes:
   pg_data:
+  sonarqube_database_data:
+  sonarqube_bundled-plugins:
+  sonarqube_conf:
+  sonarqube_data:
+  sonarqube_database:
+  sonarqube_extensions:
