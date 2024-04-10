@@ -31,7 +31,7 @@ services:
     image: sonarqube
     depends_on:
       - db
-      - back
+      - ba
     environment:
       - SONARQUBE_JDBC_USERNAME=sonarqube
       - SONARQUBE_JDBC_PASSWORD=sonarpass
