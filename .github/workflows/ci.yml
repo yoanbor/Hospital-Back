@@ -8,11 +8,11 @@ run-name: ${{ github.actor }} is learning GitHub Actions
 on:
   push:
     branches:
-      - main
+      - cicd
       - develop
   pull_request:
     branches:
-      - main
+      - cicd
       - develop
 
 # Toutes les tâches éxécutées
