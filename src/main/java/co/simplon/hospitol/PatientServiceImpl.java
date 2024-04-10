@@ -1,4 +1,4 @@
-package co.simplon.hospitol.business.service.patient;
+package co.simplon.hospitol;
 
 import co.simplon.hospitol.business.convert.PatientConvert;
 import co.simplon.hospitol.business.dto.PatientDTO;
