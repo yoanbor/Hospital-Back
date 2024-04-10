@@ -20,8 +20,8 @@ class PatientTest1 {
         // Je créé un nouveau patient
         Patient patient = new Patient();
 
-        patient.setName("Ali");
-        patient.setFirstname("Saif");
+        patient.setName("Poteau");
+        patient.setFirstname("Florian");
         patient.setDob(new Date());
         patient.setSecuritySocialNumber("1923929392");
 
