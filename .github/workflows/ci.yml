@@ -1,24 +1,50 @@
-name: Java CI with Maven
+#Facultatif : On peut nommer notre workflow
+name: Integration Continue
 
+#Falcultatif : Nommé l'éxécution d'un worflow avec aussi l'utilisateur qui l'a déclenchée
+run-name: ${{ github.actor }} is learning GitHub Actions
+
+#Ici on dit à quel moment on déclenche les actions (ici à chaque push ou pull request faits sur les branches main et develop)
 on:
   push:
-    branches: [ "cicd" ]
+    branches:
+      - main
+      - develop
   pull_request:
-    branches: [ "cicd" ]
+    branches:
+      - main
+      - develop
 
+# Toutes les tâches éxécutées
 jobs:
-  build:
-
+  #Nom de la tâche
+  test:
+    #environment sur lequel tout va s'éxécuté
     runs-on: ubuntu-latest
 
+    services:
+      postres:
+        image: postgres:16.2
+        env:
+          POSTGRES_USER: ${{secrets.CI_DB_USER}}
+          POSTGRES_PASSWORD: ${{secrets.CI_DB_PASSWORD}}
+          POSTGRES_DB: db
+        ports:
+          - 5432:5432
+
+    #Regroupe toutes les étapes éxécutées (chaque élément imbriqué si dessous est une action ou un script shell distinct
     steps:
-      - uses: actions/checkout@v3
-      - name: Set up JDK 17
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up JDK 21.0.1
         uses: actions/setup-java@v3
         with:
-          java-version: '17'
-          distribution: 'temurin'
-          cache: maven
+          java-version: '21.0.1'
+          distribution: 'adopt'
+
       - name: Build with Maven
         run: mvn -B package --file pom.xml
 
+      - name: Run integration tests
+        run: mvn integration-test
