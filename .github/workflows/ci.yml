@@ -26,8 +26,8 @@ jobs:
       postres:
         image: postgres:16.2
         env:
-          POSTGRES_USER: dbuser
-          POSTGRES_PASSWORD: dbpass
+          POSTGRES_USER: ${{secrets.CI_DB_USER}}
+          POSTGRES_PASSWORD: ${{secrets.CI_DB_PASSWORD}}
           POSTGRES_DB: db
         ports:
           - 5432:5432
