@@ -2,9 +2,6 @@ package co.simplon.hospitol.persistance.entity;
 
 import jakarta.persistence.*;
 
-import java.sql.Timestamp;
-
-
 /**
  * Entity class representing a bedroom.
  */
@@ -15,35 +12,27 @@ public class Bedroom {
     @Id
     @Column(name = "id_bedroom")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private int idBedroom;
 
     @Column(name = "numbers")
-    private int numbers;
-
-    @Temporal(TemporalType.TIMESTAMP)
-    @Column(name = "creation_dt")
-    private Timestamp creationDT;
-
-    @Temporal(TemporalType.TIMESTAMP)
-    @Column(name = "modification_dt")
-    private Timestamp modificationDT;
+    private int numbersBedroom;
 
     /**
      * Retrieves the ID of the bedroom.
      *
      * @return The ID of the bedroom.
      */
-    public int getId() {
-        return id;
+    public int getIdBedroom() {
+        return idBedroom;
     }
 
     /**
      * Sets the ID of the bedroom.
      *
-     * @param id The ID of the bedroom.
+     * @param idBedroom The ID of the bedroom.
      */
-    public void setId(int id) {
-        this.id = id;
+    public void setIdBedroom(int idBedroom) {
+        this.idBedroom = idBedroom;
     }
 
     /**
@@ -51,52 +40,16 @@ public class Bedroom {
      *
      * @return The number of beds in the bedroom.
      */
-    public int getNumbers() {
-        return numbers;
+    public int getNumbersBedroom() {
+        return numbersBedroom;
     }
 
     /**
      * Sets the number of beds in the bedroom.
      *
-     * @param numbers The number of beds in the bedroom.
+     * @param numbersBedroom The number of beds in the bedroom.
      */
-    public void setNumbers(int numbers) {
-        this.numbers = numbers;
-    }
-
-    /**
-     * Retrieves the timestamp indicating the creation date and time of the bedroom.
-     *
-     * @return The creation date and time of the bedroom.
-     */
-    public Timestamp getCreationDT() {
-        return creationDT;
-    }
-
-    /**
-     * Sets the timestamp indicating the creation date and time of the bedroom.
-     *
-     * @param creationDT The creation date and time of the bedroom.
-     */
-    public void setCreationDT(Timestamp creationDT) {
-        this.creationDT = creationDT;
-    }
-
-    /**
-     * Retrieves the timestamp indicating the modification date and time of the bedroom.
-     *
-     * @return The modification date and time of the bedroom.
-     */
-    public Timestamp getModificationDT() {
-        return modificationDT;
-    }
-
-    /**
-     * Sets the timestamp indicating the modification date and time of the bedroom.
-     *
-     * @param modificationDT The modification date and time of the bedroom.
-     */
-    public void setModificationDT(Timestamp modificationDT) {
-        this.modificationDT = modificationDT;
+    public void setNumbersBedroom(int numbersBedroom) {
+        this.numbersBedroom = numbersBedroom;
     }
 }

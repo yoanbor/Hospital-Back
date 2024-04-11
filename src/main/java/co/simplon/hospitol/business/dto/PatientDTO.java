@@ -11,19 +11,19 @@ import java.util.Date;
  */
 public class PatientDTO {
 
-    private int id;
+    private int idPatient;
 
-    private String name;
+    private String namePatient;
 
-    private String firstname;
+    private String firstnamePatient;
 
-    private Date dob;
+    private Date dobPatient;
 
-    private String securitySocialNumber;
+    private String securitySocialNumberPatient;
 
-    private Timestamp creationDT;
+    private Timestamp creationDTPatient;
 
-    private Timestamp modificationDT;
+    private Timestamp modificationDTPatient;
 
     private Service services;
 
@@ -34,17 +34,17 @@ public class PatientDTO {
      *
      * @return The ID of the patient.
      */
-    public int getId() {
-        return id;
+    public int getIdPatient() {
+        return idPatient;
     }
 
     /**
      * Sets the ID of the patient.
      *
-     * @param id The ID of the patient.
+     * @param idPatient The ID of the patient.
      */
-    public void setId(int id) {
-        this.id = id;
+    public void setIdPatient(int idPatient) {
+        this.idPatient = idPatient;
     }
 
     /**
@@ -52,17 +52,17 @@ public class PatientDTO {
      *
      * @return The last name of the patient.
      */
-    public String getName() {
-        return name;
+    public String getNamePatient() {
+        return namePatient;
     }
 
     /**
      * Sets the last name of the patient.
      *
-     * @param name The last name of the patient.
+     * @param namePatient The last name of the patient.
      */
-    public void setName(String name) {
-        this.name = name;
+    public void setNamePatient(String namePatient) {
+        this.namePatient = namePatient;
     }
 
     /**
@@ -70,58 +70,53 @@ public class PatientDTO {
      *
      * @return The first name of the patient.
      */
-    public String getFirstname() {
-        return firstname;
+    public String getFirstnamePatient() {
+        return firstnamePatient;
     }
-
 
     /**
      * Sets the first name of the patient.
      *
-     * @param firstname The first name of the patient.
+     * @param firstnamePatient The first name of the patient.
      */
-    public void setFirstname(String firstname) {
-        this.firstname = firstname;
+    public void setFirstnamePatient(String firstnamePatient) {
+        this.firstnamePatient = firstnamePatient;
     }
-
 
     /**
      * Retrieves the date of birth of the patient.
      *
      * @return The date of birth of the patient.
      */
-    public Date getDob() {
-        return dob;
+    public Date getDobPatient() {
+        return dobPatient;
     }
-
 
     /**
      * Sets the date of birth of the patient.
      *
-     * @param dob The date of birth of the patient.
+     * @param dobPatient The date of birth of the patient.
      */
-    public void setDob(Date dob) {
-        this.dob = dob;
+    public void setDobPatient(Date dobPatient) {
+        this.dobPatient = dobPatient;
     }
-
 
     /**
      * Retrieves the social security number of the patient.
      *
      * @return The social security number of the patient.
      */
-    public String getSecuritySocialNumber() {
-        return securitySocialNumber;
+    public String getSecuritySocialNumberPatient() {
+        return securitySocialNumberPatient;
     }
-
 
     /**
      * Sets the social security number of the patient.
      *
-     * @param securitySocialNumber The social security number of the patient.
+     * @param securitySocialNumberPatient The social security number of the patient.
      */
-    public void setSecuritySocialNumber(String securitySocialNumber) {
-        this.securitySocialNumber = securitySocialNumber;
+    public void setSecuritySocialNumberPatient(String securitySocialNumberPatient) {
+        this.securitySocialNumberPatient = securitySocialNumberPatient;
     }
 
     /**
@@ -129,40 +124,36 @@ public class PatientDTO {
      *
      * @return The creation date and time of the patient.
      */
-    public Timestamp getCreationDT() {
-        return creationDT;
+    public Timestamp getCreationDTPatient() {
+        return creationDTPatient;
     }
-
 
     /**
      * Sets the timestamp indicating the creation date and time of the patient.
      *
-     * @param creationDT The creation date and time of the patient.
+     * @param creationDTPatient The creation date and time of the patient.
      */
-    public void setCreationDT(Timestamp creationDT) {
-        this.creationDT = creationDT;
+    public void setCreationDTPatient(Timestamp creationDTPatient) {
+        this.creationDTPatient = creationDTPatient;
     }
-
 
     /**
      * Retrieves the timestamp indicating the modification date and time of the patient.
      *
      * @return The modification date and time of the patient.
      */
-    public Timestamp getModificationDT() {
-        return modificationDT;
+    public Timestamp getModificationDTPatient() {
+        return modificationDTPatient;
     }
-
 
     /**
      * Sets the timestamp indicating the modification date and time of the patient.
      *
-     * @param modificationDT The modification date and time of the patient.
+     * @param modificationDTPatient The modification date and time of the patient.
      */
-    public void setModificationDT(Timestamp modificationDT) {
-        this.modificationDT = modificationDT;
+    public void setModificationDTPatient(Timestamp modificationDTPatient) {
+        this.modificationDTPatient = modificationDTPatient;
     }
-
 
     /**
      * Retrieves the service associated with the patient.
@@ -170,7 +161,7 @@ public class PatientDTO {
      * @return The service associated with the patient.
      */
     public Service getServices() {
-        return (Service) services;
+        return services;
     }
 
     /**
@@ -188,7 +179,7 @@ public class PatientDTO {
      * @return The bed associated with the patient.
      */
     public Bed getBeds() {
-        return (Bed) beds;
+        return beds;
     }
 
     /**

@@ -2,8 +2,6 @@ package co.simplon.hospitol.persistance.entity;
 
 import jakarta.persistence.*;
 
-import java.sql.Timestamp;
-
 /**
  * Represents a bed entity that is mapped to the "beds" table in the database.
  */
@@ -17,27 +15,13 @@ public class Bed {
     @Id
     @Column(name = "id_bed")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private int idBed;
 
     /**
      * The number of beds.
      */
     @Column(name = "numbers")
-    private int numbers;
-
-    /**
-     * The timestamp indicating the creation date and time of the bed entity.
-     */
-    @Temporal(TemporalType.TIMESTAMP)
-    @Column(name = "creation_dt")
-    private Timestamp creationDT;
-
-    /**
-     * The timestamp indicating the modification date and time of the bed entity.
-     */
-    @Temporal(TemporalType.TIMESTAMP)
-    @Column(name = "modification_dt")
-    private Timestamp modificationDT;
+    private int numbersBed;
 
     /**
      * The bedroom associated with this bed.
@@ -51,17 +35,17 @@ public class Bed {
      *
      * @return The unique identifier of the bed.
      */
-    public int getId() {
-        return id;
+    public int getIdBed() {
+        return idBed;
     }
 
     /**
      * Sets the unique identifier of the bed.
      *
-     * @param id The unique identifier of the bed.
+     * @param idBed The unique identifier of the bed.
      */
-    public void setId(int id) {
-        this.id = id;
+    public void setIdBed(int idBed) {
+        this.idBed = idBed;
     }
 
     /**
@@ -69,53 +53,17 @@ public class Bed {
      *
      * @return The number of beds.
      */
-    public int getNumbers() {
-        return numbers;
+    public int getNumbersBed() {
+        return numbersBed;
     }
 
     /**
      * Sets the number of beds.
      *
-     * @param numbers The number of beds.
+     * @param numbersBed The number of beds.
      */
-    public void setNumbers(int numbers) {
-        this.numbers = numbers;
-    }
-
-    /**
-     * Retrieves the timestamp indicating the creation date and time of the bed entity.
-     *
-     * @return The creation date and time of the bed entity.
-     */
-    public Timestamp getCreationDT() {
-        return creationDT;
-    }
-
-    /**
-     * Sets the timestamp indicating the creation date and time of the bed entity.
-     *
-     * @param creationDT The creation date and time of the bed entity.
-     */
-    public void setCreationDT(Timestamp creationDT) {
-        this.creationDT = creationDT;
-    }
-
-    /**
-     * Retrieves the timestamp indicating the modification date and time of the bed entity.
-     *
-     * @return The modification date and time of the bed entity.
-     */
-    public Timestamp getModificationDT() {
-        return modificationDT;
-    }
-
-    /**
-     * Sets the timestamp indicating the modification date and time of the bed entity.
-     *
-     * @param modificationDT The modification date and time of the bed entity.
-     */
-    public void setModificationDT(Timestamp modificationDT) {
-        this.modificationDT = modificationDT;
+    public void setNumbersBed(int numbersBed) {
+        this.numbersBed = numbersBed;
     }
 
     /**

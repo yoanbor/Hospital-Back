@@ -38,10 +38,8 @@ public class BedroomConvert {
      */
     public BedroomDTO convertEntityToDto(final Bedroom entity) {
         final BedroomDTO dto = new BedroomDTO();
-        dto.setId(entity.getId());
-        dto.setNumbers(entity.getNumbers());
-        dto.setCreationDT(entity.getCreationDT());
-        dto.setModificationDT(entity.getModificationDT());
+        dto.setIdBedroom(entity.getIdBedroom());
+        dto.setNumbersBedroom(entity.getNumbersBedroom());
 
         return dto;
     }
@@ -54,10 +52,8 @@ public class BedroomConvert {
      */
     public Bedroom convertDtoToEntity(final BedroomDTO dto) {
         final Bedroom entity = new Bedroom();
-        entity.setId(dto.getId());
-        entity.setNumbers(dto.getNumbers());
-        entity.setCreationDT(dto.getCreationDT());
-        entity.setModificationDT(dto.getModificationDT());
+        entity.setIdBedroom(dto.getIdBedroom());
+        entity.setNumbersBedroom(dto.getNumbersBedroom());
 
         return entity;
     }

@@ -1,39 +1,31 @@
 package co.simplon.hospitol.business.dto;
 
-import java.sql.Timestamp;
-
 /**
  * Data Transfer Object (DTO) representing a Bedroom.
  */
 public class BedroomDTO {
 
-    private int id;
+    private int idBedroom;
 
-    private int numbers;
-
-    private Timestamp creationDT;
-
-    private Timestamp modificationDT;
-
-
+    private int numbersBedroom;
 
     /**
      * Retrieves the ID of the bedroom.
      *
      * @return The ID of the bedroom.
      */
-    public int getId() {
-        return id;
+    public int getIdBedroom() {
+        return idBedroom;
     }
 
 
     /**
      * Sets the ID of the bedroom.
      *
-     * @param id The ID of the bedroom.
+     * @param idBedroom The ID of the bedroom.
      */
-    public void setId(int id) {
-        this.id = id;
+    public void setIdBedroom(int idBedroom) {
+        this.idBedroom = idBedroom;
     }
 
     /**
@@ -41,52 +33,17 @@ public class BedroomDTO {
      *
      * @return The number of the bedroom.
      */
-    public int getNumbers() {
-        return numbers;
+    public int getNumbersBedroom() {
+        return numbersBedroom;
     }
 
     /**
      * Sets the number of the bedroom.
      *
-     * @param numbers The number of the bedroom.
+     * @param numbersBedroom The number of the bedroom.
      */
-    public void setNumbers(int numbers) {
-        this.numbers = numbers;
+    public void setNumbersBedroom(int numbersBedroom) {
+        this.numbersBedroom = numbersBedroom;
     }
 
-    /**
-     * Retrieves the timestamp indicating the creation date and time of the bedroom.
-     *
-     * @return The creation date and time of the bedroom.
-     */
-    public Timestamp getCreationDT() {
-        return creationDT;
-    }
-
-    /**
-     * Sets the timestamp indicating the creation date and time of the bedroom.
-     *
-     * @param creationDT The creation date and time of the bedroom.
-     */
-    public void setCreationDT(Timestamp creationDT) {
-        this.creationDT = creationDT;
-    }
-
-    /**
-     * Retrieves the timestamp indicating the modification date and time of the bedroom.
-     *
-     * @return The modification date and time of the bedroom.
-     */
-    public Timestamp getModificationDT() {
-        return modificationDT;
-    }
-
-    /**
-     * Sets the timestamp indicating the modification date and time of the bedroom.
-     *
-     * @param modificationDT The modification date and time of the bedroom.
-     */
-    public void setModificationDT(Timestamp modificationDT) {
-        this.modificationDT = modificationDT;
-    }
 }

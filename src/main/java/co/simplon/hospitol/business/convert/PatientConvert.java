@@ -41,13 +41,13 @@ public class PatientConvert {
      */
     public PatientDTO convertEntityToDto(final Patient entity) {
         final PatientDTO dto = new PatientDTO();
-        dto.setId(entity.getId());
-        dto.setName(entity.getName());
-        dto.setFirstname(entity.getFirstname());
-        dto.setDob(entity.getDob());
-        dto.setSecuritySocialNumber(entity.getSecuritySocialNumber());
-        dto.setCreationDT(entity.getCreationDT());
-        dto.setModificationDT(entity.getModificationDT());
+        dto.setIdPatient(entity.getIdPatient());
+        dto.setNamePatient(entity.getNamePatient());
+        dto.setFirstnamePatient(entity.getFirstnamePatient());
+        dto.setDobPatient(entity.getDobPatient());
+        dto.setSecuritySocialNumberPatient(entity.getSecuritySocialNumberPatient());
+        dto.setCreationDTPatient(entity.getCreationDTPatient());
+        dto.setModificationDTPatient(entity.getModificationDTPatient());
         dto.setServices(entity.getServices());
         dto.setBeds(entity.getBeds());
 
@@ -62,13 +62,13 @@ public class PatientConvert {
      */
     public Patient convertDtoToEntity(final PatientDTO dto) {
         final Patient entity = new Patient();
-        entity.setId(dto.getId());
-        entity.setName(dto.getName());
-        entity.setFirstname(dto.getFirstname());
-        entity.setDob(dto.getDob());
-        entity.setSecuritySocialNumber(dto.getSecuritySocialNumber());
-        entity.setCreationDT(dto.getCreationDT());
-        entity.setModificationDT(dto.getModificationDT());
+        entity.setIdPatient(dto.getIdPatient());
+        entity.setNamePatient(dto.getNamePatient());
+        entity.setFirstnamePatient(dto.getFirstnamePatient());
+        entity.setDobPatient(dto.getDobPatient());
+        entity.setSecuritySocialNumberPatient(dto.getSecuritySocialNumberPatient());
+        entity.setCreationDTPatient(dto.getCreationDTPatient());
+        entity.setModificationDTPatient(dto.getModificationDTPatient());
         entity.setServices(dto.getServices());
         entity.setBeds(dto.getBeds());
 

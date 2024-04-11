@@ -16,31 +16,31 @@ public class Patient {
     @Id
     @Column(name = "id_patient")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private int idPatient;
 
     @Basic
     @Column(name = "name", length = 50)
-    private String name;
+    private String namePatient;
 
     @Basic
     @Column(name = "firstname", length = 50)
-    private String firstname;
+    private String firstnamePatient;
 
     @Temporal(TemporalType.DATE)
     @Column(name = "dob")
-    private Date dob;
+    private Date dobPatient;
 
     @Basic
     @Column(name = "securitysocialnumber", length = 13)
-    private String securitySocialNumber;
+    private String securitySocialNumberPatient;
 
     @Temporal(TemporalType.TIMESTAMP)
     @Column(name = "creation_dt")
-    private Timestamp creationDT;
+    private Timestamp creationDTPatient;
 
     @Temporal(TemporalType.TIMESTAMP)
     @Column(name = "modification_dt")
-    private Timestamp modificationDT;
+    private Timestamp modificationDTPatient;
 
     @ManyToOne
     @JoinColumn(name = "id_service")
@@ -55,17 +55,17 @@ public class Patient {
      *
      * @return The ID of the patient.
      */
-    public int getId() {
-        return id;
+    public int getIdPatient() {
+        return idPatient;
     }
 
     /**
      * Sets the ID of the patient.
      *
-     * @param id The ID of the patient.
+     * @param idPatient The ID of the patient.
      */
-    public void setId(int id) {
-        this.id = id;
+    public void setIdPatient(int idPatient) {
+        this.idPatient = idPatient;
     }
 
     /**
@@ -73,17 +73,17 @@ public class Patient {
      *
      * @return The last name of the patient.
      */
-    public String getName() {
-        return name;
+    public String getNamePatient() {
+        return namePatient;
     }
 
     /**
      * Sets the last name of the patient.
      *
-     * @param name The last name of the patient.
+     * @param namePatient The last name of the patient.
      */
-     public void setName(String name) {
-        this.name = name;
+    public void setNamePatient(String namePatient) {
+        this.namePatient = namePatient;
     }
 
     /**
@@ -91,17 +91,17 @@ public class Patient {
      *
      * @return The first name of the patient.
      */
-    public String getFirstname() {
-        return firstname;
+    public String getFirstnamePatient() {
+        return firstnamePatient;
     }
 
     /**
      * Sets the first name of the patient.
      *
-     * @param firstname The first name of the patient.
+     * @param firstnamePatient The first name of the patient.
      */
-     public void setFirstname(String firstname) {
-        this.firstname = firstname;
+    public void setFirstnamePatient(String firstnamePatient) {
+        this.firstnamePatient = firstnamePatient;
     }
 
     /**
@@ -109,17 +109,17 @@ public class Patient {
      *
      * @return The date of birth of the patient.
      */
-    public Date getDob() {
-        return dob;
+    public Date getDobPatient() {
+        return dobPatient;
     }
 
     /**
      * Sets the date of birth of the patient.
      *
-     * @param dob The date of birth of the patient.
+     * @param dobPatient The date of birth of the patient.
      */
-    public void setDob(Date dob) {
-        this.dob = dob;
+    public void setDobPatient(Date dobPatient) {
+        this.dobPatient = dobPatient;
     }
 
     /**
@@ -127,17 +127,17 @@ public class Patient {
      *
      * @return The social security number of the patient.
      */
-    public String getSecuritySocialNumber() {
-        return securitySocialNumber;
+    public String getSecuritySocialNumberPatient() {
+        return securitySocialNumberPatient;
     }
 
     /**
      * Sets the social security number of the patient.
      *
-     * @param securitySocialNumber The social security number of the patient.
+     * @param securitySocialNumberPatient The social security number of the patient.
      */
-    public void setSecuritySocialNumber(String securitySocialNumber) {
-        this.securitySocialNumber = securitySocialNumber;
+    public void setSecuritySocialNumberPatient(String securitySocialNumberPatient) {
+        this.securitySocialNumberPatient = securitySocialNumberPatient;
     }
 
     /**
@@ -145,17 +145,17 @@ public class Patient {
      *
      * @return The creation date and time of the patient.
      */
-    public Timestamp getCreationDT() {
-        return creationDT;
+    public Timestamp getCreationDTPatient() {
+        return creationDTPatient;
     }
 
     /**
      * Sets the timestamp indicating the creation date and time of the patient.
      *
-     * @param creationDT The creation date and time of the patient.
+     * @param creationDTPatient The creation date and time of the patient.
      */
-    public void setCreationDT(Timestamp creationDT) {
-        this.creationDT = creationDT;
+    public void setCreationDTPatient(Timestamp creationDTPatient) {
+        this.creationDTPatient = creationDTPatient;
     }
 
     /**
@@ -163,17 +163,17 @@ public class Patient {
      *
      * @return The modification date and time of the patient.
      */
-    public Timestamp getModificationDT() {
-        return modificationDT;
+    public Timestamp getModificationDTPatient() {
+        return modificationDTPatient;
     }
 
     /**
      * Sets the timestamp indicating the modification date and time of the patient.
      *
-     * @param modificationDT The modification date and time of the patient.
+     * @param modificationDTPatient The modification date and time of the patient.
      */
-    public void setModificationDT(Timestamp modificationDT) {
-        this.modificationDT = modificationDT;
+    public void setModificationDTPatient(Timestamp modificationDTPatient) {
+        this.modificationDTPatient = modificationDTPatient;
     }
 
     /**

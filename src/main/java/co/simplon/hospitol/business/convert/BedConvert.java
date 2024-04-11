@@ -40,10 +40,10 @@ public class BedConvert {
      */
     public BedDTO convertEntityToDto(final Bed entity) {
         final BedDTO dto = new BedDTO();
-        dto.setId(entity.getId());
-        dto.setNumbers(entity.getNumbers());
-        dto.setCreationDT(entity.getCreationDT());
-        dto.setModificationDT(entity.getModificationDT());
+        dto.setIdBed(entity.getIdBed());
+        dto.setNumbersBed(entity.getNumbersBed());
+        dto.setCreationDTBed(entity.getCreationDTBed());
+        dto.setModificationDTBed(entity.getModificationDTBed());
         dto.setBedrooms(entity.getBedrooms());
 
         return dto;
@@ -57,10 +57,10 @@ public class BedConvert {
      */
     public Bed convertDtoToEntity(final BedDTO dto) {
         final Bed entity = new Bed();
-        entity.setId(dto.getId());
-        entity.setNumbers(dto.getNumbers());
-        entity.setCreationDT(dto.getCreationDT());
-        entity.setModificationDT(dto.getModificationDT());
+        entity.setIdBed(dto.getIdBed());
+        entity.setNumbersBed(dto.getNumbersBed());
+        entity.setCreationDTBed(dto.getCreationDTBed());
+        entity.setModificationDTBed(dto.getModificationDTBed());
         entity.setBedrooms(dto.getBedrooms());
 
         return entity;
