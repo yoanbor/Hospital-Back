@@ -12,6 +12,7 @@ public class BedDTO {
 
     private Bedroom bedrooms;
 
+
     /**
      * Retrieves the ID of the bed.
      *

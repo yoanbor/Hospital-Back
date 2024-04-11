@@ -1,4 +1,4 @@
-package co.simplon.hospitol;
+package co.simplon.hospitol.business.service.patient;
 
 import co.simplon.hospitol.business.convert.PatientConvert;
 import co.simplon.hospitol.business.dto.PatientDTO;
@@ -50,10 +50,10 @@ public class PatientServiceImpl implements IPatientService {
         Optional<Patient> optionalPatient = patientRepo.findById(id);
         if (optionalPatient.isPresent()) {
             Patient existingPatient = optionalPatient.get();
-            existingPatient.setName(patientDTO.getName());
-            existingPatient.setFirstname(patientDTO.getFirstname());
-            existingPatient.setDob(patientDTO.getDob());
-            existingPatient.setSecuritySocialNumber(patientDTO.getSecuritySocialNumber());
+            existingPatient.setNamePatient(patientDTO.getNamePatient());
+            existingPatient.setFirstnamePatient(patientDTO.getFirstnamePatient());
+            existingPatient.setDobPatient(patientDTO.getDobPatient());
+            existingPatient.setSecuritySocialNumberPatient(patientDTO.getSecuritySocialNumberPatient());
             existingPatient.setServices(patientDTO.getServices());
             existingPatient.setBeds(patientDTO.getBeds());
 

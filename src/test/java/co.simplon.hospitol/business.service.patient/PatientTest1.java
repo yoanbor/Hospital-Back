@@ -20,10 +20,10 @@ class PatientTest1 {
         // Je créé un nouveau patient
         Patient patient = new Patient();
 
-        patient.setName("Poteau");
-        patient.setFirstname("Florian");
-        patient.setDob(new Date());
-        patient.setSecuritySocialNumber("1923929392");
+        patient.setNamePatient("Poteau");
+        patient.setFirstnamePatient("Florian");
+        patient.setDobPatient(new Date());
+        patient.setSecuritySocialNumberPatient("1923929392");
 
 
         // Vérifie si l'objet patient n'est pas null
@@ -31,10 +31,10 @@ class PatientTest1 {
 
         // Vérifie si les valeurs définit dans l'objet patient correspond aux valeur
         // attendue
-        assertEquals("Poteau", patient.getName());
-        assertEquals("Florian", patient.getFirstname());
-        assertNotNull(patient.getDob());
-        assertEquals("1923929392", patient.getSecuritySocialNumber());
+        assertEquals("Poteau", patient.getNamePatient());
+        assertEquals("Florian", patient.getFirstnamePatient());
+        assertNotNull(patient.getDobPatient());
+        assertEquals("1923929392", patient.getSecuritySocialNumberPatient());
 
     }
 }
