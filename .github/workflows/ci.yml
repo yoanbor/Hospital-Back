@@ -4,7 +4,7 @@ name: Integration Continue
 #Falcultatif : Nommé l'éxécution d'un worflow avec aussi l'utilisateur qui l'a déclenchée
 run-name: ${{ github.actor }} is learning GitHub Actions
 
-#Ici on dit à quel moment on déclenche les actions (ici à chaque push ou pull request faits sur les branches main et develop)
+#Ici on dit à quel momnt on déclenche les actions (ici à chaque push ou pull request faits sur les branches main et develop)
 on:
   push:
     branches:
