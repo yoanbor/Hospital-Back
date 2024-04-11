@@ -76,7 +76,7 @@ $update_date_services$ LANGUAGE plpgsql; -- variable trigger + spécifie le lang
 
 --Création du trigger (en appelant la fonction 'set_modification_date_services()')
 CREATE TRIGGER set_modification_date_services_trigger
-    BEFORE UPDATE ON services -- avant l'insertion dans la table services
+    BEFORE UPDATE ON services -- avant l'insertion dans la tabl services
     FOR EACH ROW -- pour chaque ligne
     EXECUTE FUNCTION set_modification_date_services(); -- exécute la fonction pour chaque nouvelle ligne insérée
 
