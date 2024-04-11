@@ -47,4 +47,4 @@ jobs:
         run: mvn -B package --file pom.xml
 
       - name: Run tests
-        run: mvn test -Dtest=PatientTest1
+        run: mvn test
