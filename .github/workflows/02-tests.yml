@@ -1,10 +1,7 @@
-#Facultatif : On peut nommer notre workflow
 name: Integration Continue
 
-#Falcultatif : Nommé l'éxécution d'un worflow avec aussi l'utilisateur qui l'a déclenchée
 run-name: ${{ github.actor }} is learning GitHub Actions
 
-#Ici on dit à quel momnt on déclenche les actions (ici à chaque push ou pull request faits sur les branches main et develop)
 on:
   push:
     branches:
@@ -15,11 +12,8 @@ on:
       - cicd
       - develop
 
-# Toutes les tâches éxécutées
 jobs:
-  #Nom de la tâche
   test:
-    #environment sur lequel tout va s'éxécuté
     runs-on: ubuntu-latest
 
     services:
@@ -32,7 +26,6 @@ jobs:
         ports:
           - 5432:5432
 
-    #Regroupe toutes les étapes éxécutées (chaque élément imbriqué si dessous est une action ou un script shell distinct
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
@@ -46,5 +39,3 @@ jobs:
       - name: Build with Maven
         run: mvn -B package --file pom.xml
 
-      - name: Run tests
-        run: mvn test

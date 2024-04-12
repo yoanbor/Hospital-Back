@@ -11,11 +11,10 @@ import org.springframework.boot.test.context.SpringBootTest;
 import co.simplon.hospitol.persistance.entity.Patient;
 
 @SpringBootTest
-class PatientTest1 {
+class CreateNewPatientTest {
 
-    // test unitaire
     @Test
-    void testPatientCreation() {
+    void CreateNewPatientTest() {
 
         // Je créé un nouveau patient
         Patient patient = new Patient();
@@ -29,8 +28,7 @@ class PatientTest1 {
         // Vérifie si l'objet patient n'est pas null
         assertNotNull(patient);
 
-        // Vérifie si les valeurs définit dans l'objet patient correspond aux valeur
-        // attendue
+        // Vérifie si les valeurs définit dans l'objet patient correspond aux valeurs attendues
         assertEquals("Poteau", patient.getNamePatient());
         assertEquals("Florian", patient.getFirstnamePatient());
         assertNotNull(patient.getDobPatient());
