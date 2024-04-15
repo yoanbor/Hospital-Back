@@ -16,6 +16,10 @@ jobs:
   test:
     runs-on: ubuntu-latest
 
+    # https://docs.github.com/en/actions/learn-github-actions/variables
+    env:
+      HUSKY: 0
+
     services:
       postres:
         image: postgres:16.2
